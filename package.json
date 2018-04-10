@@ -28,6 +28,7 @@
   },
   "scripts": {
     "start": "nodemon server.js",
+    "test": "node test/testrunner.js",
     "build": "webpack"
   },
   "devDependencies": {
