@@ -1,6 +1,6 @@
 Aplicacion de ejemplo para uso de Jenkins en Javascript Backend
 
-tutorial usado
+tutorial revisado
 https://medium.com/wearetheledger/jenkins-your-butler-for-continuous-integration-blue-ocean-docker-image-solution-to-node-not-ebf9ebfbfa78
 
 comando para instalar

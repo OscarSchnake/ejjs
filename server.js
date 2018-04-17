@@ -43,7 +43,7 @@ app.use(function(req, res) {
     res.status(404).send('Error 5001 : Página no encontrada');
 });
 
-app.set('port', (process.env.PORT || 3001));
+app.set('port', (process.env.PORT || 8000));
 
 app.listen(app.get('port'), function() {
     console.log('Servidor en el puerto ' + app.get('port'));

@@ -1,10 +1,10 @@
 {
-  "name": "control-horario",
+  "name": "ejjs",
   "private": true,
   "version": "1.0.0",
-  "description": "Sistema de Control Horario de Optimisa",
+  "description": "Aplicación de prueba para test unitario e integración continua",
   "main": "app.js",
-  "author": "LKV, FM, DGB, OSV",
+  "author": "OSV",
   "license": "ISC",
   "dependencies": {
     "body-parser": "*",
