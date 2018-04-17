@@ -6,6 +6,7 @@ node('node') {
     currentBuild.result = "SUCCESS"
 
     pipeline {
+    agent { dockerfile true }
     try {
 
        stage('Checkout'){
