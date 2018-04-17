@@ -15,7 +15,7 @@ ejjs.get('/', function(req, res) {
 
     let json_res = {
         moraleja: 'No es que tenga deficit atencional, es que no me importa lo que dices'
-    }
+    };
     res.status(200).json(json_res).end();
 });
 

@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use(function(err, req, res, next) {
     if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
-        Logger.logger.error('Bad JSON ' + err);
+//        Logger.logger.error('Bad JSON ' + err);
         res.status(400).send(err).end();
     } else {
         next();
@@ -46,5 +46,5 @@ app.use(function(req, res) {
 app.set('port', (process.env.PORT || 8000));
 
 app.listen(app.get('port'), function() {
-    console.log('Servidor en el puerto ' + app.get('port'));
+    //console.log('Servidor en el puerto ' + app.get('port'));
 });
