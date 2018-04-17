@@ -5,6 +5,10 @@ node {
           checkout scm
        }
 
+       stage('Static check'){
+          sh 'eslint *.js routes/*.js'
+       }
+
        stage('Test'){
          env.NODE_ENV = "test"
          print "Environment will be : ${env.NODE_ENV}"
