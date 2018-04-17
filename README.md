@@ -25,3 +25,8 @@ Instalar o verficar que esten instalados
     NodeJS Plugin
 
 Instalar NodeJS desde ndejs.org
+
+
+---------------
+Cofiguracion en docker
+     tipo Github repository

@@ -5,6 +5,7 @@ node('node') {
 
     currentBuild.result = "SUCCESS"
 
+    pipeline {
     try {
 
        stage('Checkout'){
@@ -37,6 +38,6 @@ node('node') {
             to: 'zzzz@yyyyy.com'
 
         throw err
+     }
     }
-
 }
