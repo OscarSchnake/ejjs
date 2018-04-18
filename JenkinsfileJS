@@ -1,6 +1,9 @@
 #!groovy
 
-node {
+node ('node') {
+    currentBuild.result = "EXITO"
+
+    try {
        stage('Checkout'){
           checkout scm
        }
@@ -15,5 +18,16 @@ node {
          sh 'npm test'
 
        }
+      }
+      catch (err) {
+       currentBuild.result = "GUATAZO"
+
+       mail body: "error en pipeline : ${env.BUILD_URL}",
+       from: 'oschnake@gmail.cl',
+       subject: 'fallo en pipiripiline',
+       to: 'oschnake@optimisa.cl'
+
+       trow err
+      }
 
     }
