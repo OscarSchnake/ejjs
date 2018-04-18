@@ -46,5 +46,5 @@ app.use(function(req, res) {
 app.set('port', (process.env.PORT || 8000));
 
 app.listen(app.get('port'), function() {
-    //console.log('Servidor en el puerto ' + app.get('port'));
+    console.log('Servidor en el puerto ' + app.get('port'));
 });
