@@ -12,7 +12,7 @@ node {
        }
 
        stage('Static check'){
-          sh 'eslint *.js routes/*.js'
+          sh './node-modules/.bin/eslint *.js routes/*.js'
        }
 
        stage('Test'){
