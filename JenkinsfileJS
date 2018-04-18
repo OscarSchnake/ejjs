@@ -5,14 +5,8 @@ node {
           checkout scm
        }
 
-       stage('Install'){
-          sh 'node -v'
-          sh 'npm prune'
-          sh 'npm install'
-       }
-
        stage('Static check'){
-          sh './node-modules/.bin/eslint *.js routes/*.js'
+          sh 'eslint *.js routes/*.js'
        }
 
        stage('Test'){
