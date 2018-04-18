@@ -19,10 +19,10 @@ node ('node') {
          env.NODE_ENV = "test"
          print "Environment will be : ${env.NODE_ENV}"
          sh 'npm test'
-         mail body: "OK con piripipiline : ${env.BUILD_URL}",
-         from: 'oschnake@gmail.cl',
-         subject: 'OK pipiripiline',
-         to: 'oschnake@optimisa.cl'
+#         mail body: "OK con piripipiline : ${env.BUILD_URL}",
+#         from: 'oschnake@gmail.cl',
+#         subject: 'OK pipiripiline',
+#         to: 'oschnake@optimisa.cl'
 
        }
       }
