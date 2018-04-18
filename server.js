@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 
 app.use(function(err, req, res, next) {
     if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
-//        Logger.logger.error('Bad JSON ' + err);
+        Logger.logger.error('Bad JSON ' + err);;;
         res.status(400).send(err).end();
     } else {
         next();
