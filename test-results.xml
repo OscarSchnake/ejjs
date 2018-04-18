@@ -1,0 +1,9 @@
+
+[4m/Users/oschnake/Cloud/ejjs/server.js[24m
+  [2m20:9[22m   [31merror[39m  'Logger' is not defined       [2mno-undef[22m
+  [2m20:48[22m  [31merror[39m  Unnecessary semicolon         [2mno-extra-semi[22m
+  [2m20:49[22m  [31merror[39m  Unnecessary semicolon         [2mno-extra-semi[22m
+  [2m49:5[22m   [31merror[39m  Unexpected console statement  [2mno-console[22m
+
+[31m[1m✖ 4 problems (4 errors, 0 warnings)
+[22m[39m

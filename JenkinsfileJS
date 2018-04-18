@@ -9,7 +9,10 @@ node ('node') {
        }
 
        stage('Static check'){
-          sh 'eslint *.js routes/*.js'
+          sh 'eslint *.js routes/*.js -o result-eslint.xml, returnStatus: true'
+          if ( !fileExists("result-eslint.xml")) {
+            error('en analisis estatico')
+          }
        }
 
        stage('Test'){
