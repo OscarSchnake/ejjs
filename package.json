@@ -29,13 +29,17 @@
   "scripts": {
     "start": "nodemon server.js",
     "test": "node test/testrunner.js",
+    "unit-test": "node_modules/mocha/bin/mocha test/unit/helpers/UtilDatesTest.js",
     "build": "webpack"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.9.1",
     "eslint-plugin-react": "^7.0.1",
     "json-loader": "^0.5.4",
+    "mocha": "^5.1.1",
+    "sinon": "^4.5.0",
     "webpack": "^2.2.1"
   }
 }
