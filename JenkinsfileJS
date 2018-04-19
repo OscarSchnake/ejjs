@@ -1,40 +1,14 @@
 #!groovy
 
-node ('node') {
+node {
     currentBuild.result = "EXITO"
 
-    try {
-       stage('Checkout'){
+    stage('Checkout'){
           checkout scm
        }
 
-       stage('Static check'){
-          sh 'eslint *.js routes/*.js -o result-eslint.xml, returnStatus: true'
-          if ( !fileExists("result-eslint.xml")) {
-            error('en analisis estatico')
-          }
-       }
-
-       stage('Test'){
-         env.NODE_ENV = "test"
-         print "Environment will be : ${env.NODE_ENV}"
+        stage('Test'){
          sh 'npm test'
-#         mail body: "OK con piripipiline : ${env.BUILD_URL}",
-#         from: 'oschnake@gmail.cl',
-#         subject: 'OK pipiripiline',
-#         to: 'oschnake@optimisa.cl'
-
-       }
-      }
-      catch (err) {
-       currentBuild.result = "GUATAZO"
-
-       mail body: "error en pipeline : ${env.BUILD_URL}",
-       from: 'oschnake@gmail.cl',
-       subject: 'fallo en pipiripiline',
-       to: 'oschnake@optimisa.cl'
-
-       trow err
-      }
+         }
 
     }
