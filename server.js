@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const winston = require('winston');
 winston.level = 'debug';
 
-
 const ejjs = require('./routes/ejjs');
 
 const app = express();
@@ -17,7 +16,7 @@ app.use(bodyParser.json());
 
 app.use(function(err, req, res, next) {
     if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
-        Logger.logger.error('Bad JSON ' + err);;;
+//        Logger.logger.error('Bad JSON ' + err);;;
         res.status(400).send(err).end();
     } else {
         next();
@@ -28,8 +27,6 @@ app.use(function(err, req, res, next) {
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-
-
 
 //IP
 app.enable('trust proxy');
@@ -46,5 +43,5 @@ app.use(function(req, res) {
 app.set('port', (process.env.PORT || 8000));
 
 app.listen(app.get('port'), function() {
-    console.log('Servidor en el puerto ' + app.get('port'));
+//    console.log('Servidor en el puerto ' + app.get('port'));
 });
