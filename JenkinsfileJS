@@ -5,6 +5,10 @@ node {
           checkout scm
        }
 
+       stage('Install'){
+          sh 'npm install'
+       }
+
        stage('Static check'){
           sh 'eslint *.js routes/*.js'
        }
